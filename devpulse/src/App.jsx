@@ -4,6 +4,7 @@ import { fetchUser, fetchRepos } from "./services/githubService";
 import ProfileCard from "./components/ProfileCard";
 import RepoList from "./components/RepoList";
 import Skeleton from "./components/Skeleton";
+import TechInsights from "./components/TechInsights";
 import "./App.css";
 
 
@@ -67,6 +68,7 @@ function App() {
       {userData && !loading && (
         <>
           <ProfileCard user={userData} />
+           <TechInsights repos={repos} />
           <RepoList repos={repos} />
         </>
       )}
