@@ -293,3 +293,59 @@ a:hover {
     gap: 12px;
   }
 }
+
+/* ================= TECH GRID ================= */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* TECH ITEM */
+.tech-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background: rgba(2, 6, 23, 0.6);
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tech-item:hover {
+  transform: translateY(-3px);
+  border-color: #38bdf8;
+}
+
+/* LOGO */
+.tech-item img {
+  width: 28px;
+  height: 28px;
+}
+
+/* FALLBACK (if no logo) */
+.fallback {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* TOOLTIP */
+.tooltip {
+  position: absolute;
+  bottom: -25px;
+  background: #020617;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.tech-item:hover .tooltip {
+  opacity: 1;
+}
